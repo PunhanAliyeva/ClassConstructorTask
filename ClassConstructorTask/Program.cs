@@ -6,58 +6,73 @@ namespace ClassConstructorTask
     {
         static void Main(string[] args)
         {
-            #region Task1
-            //Person person = new("Punhan","Aliyeva",21);
-            //if (person.Age > 18)
-            //{
-            //    person.IsAdult = true;
-            //}
-            //else
-            //{
-            //    person.IsAdult = false;
-            //}
-            //Console.WriteLine(person.IsAdult);
+            #region LabTask1
+            //Product product = new(1,"Xiaomi","Redmi Note 12",500,52,9);
+            //product.GetInfo();
             #endregion
 
 
-            #region Task2
-            //Car car = new("KIA","Sorento",2019,"Dizel","White");
-            //car.PrintInfo();
-            #endregion
+            #region LabTask2
 
+            Student student1 = new Student("Punhan","Aliyeva","MexMat");
+            student1.ExamsEntry = new Exam[5];
+            student1.ExamsEntry[0] = new Exam("Math", 16);
+            student1.ExamsEntry[1] = new Exam("English", 33);
+            student1.ExamsEntry[2] = new Exam("History", 34);
+            student1.ExamsEntry[3] = new Exam("Geometry", 35);
+            student1.ExamsEntry[4] = new Exam("Programming", 36);
 
-            #region Task3
-            //Vehicle vehicle = new Vehicle();
-            //vehicle.MaxSpeed = 220;
-            //if (vehicle.MaxSpeed > 110)
-            //{
-            //    Console.WriteLine("Car ucun:Suret oldurur..");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Car ucun:Bele davam edin..");
-            //}
+            student1.ExamsOut = new Exam[5];
+            student1.ExamsOut[0] = new Exam("Math", 33);
+            student1.ExamsOut[1] = new Exam("English", 33);
+            student1.ExamsOut[2] = new Exam("History", 34);
+            student1.ExamsOut[3] = new Exam("Geometry", 35);
+            student1.ExamsOut[4] = new Exam("Programming", 36);
 
+            Student student2 = new Student("Selma","Mammedli","History");
+            student2.ExamsEntry = new Exam[5];
+            student2.ExamsEntry[0] = new Exam("Math", 35);
+            student2.ExamsEntry[1] = new Exam("English", 46);
+            student2.ExamsEntry[2] = new Exam("History", 34);
+            student2.ExamsEntry[3] = new Exam("Geometry", 19);
+            student2.ExamsEntry[4] = new Exam("Programming", 27);
 
-            //Motorcycle motorcycle = new Motorcycle();
-            //motorcycle.MaxSpeed = 100;
-            //if(motorcycle.MaxSpeed > 110)
-            //{
-            //    Console.WriteLine("Motorcycle ucun:Suret oldurur..");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("Motorcycle ucun:Bele davam edin..");
-            //}
-            #endregion
+            student2.ExamsOut = new Exam[5];
+            student2.ExamsOut[0] = new Exam("Math", 42);
+            student2.ExamsOut[1] = new Exam("English", 37);
+            student2.ExamsOut[2] = new Exam("History", 23);
+            student2.ExamsOut[3] = new Exam("Geometry", 35);
+            student2.ExamsOut[4] = new Exam("Programming", 29);
 
+            Student student3 = new Student("Narmin","Valizada","Law");
+            student3.ExamsEntry = new Exam[5];
+            student3.ExamsEntry[0] = new Exam("Math", 22);
+            student3.ExamsEntry[1] = new Exam("English", 33);
+            student3.ExamsEntry[2] = new Exam("History", 15);
+            student3.ExamsEntry[3] = new Exam("Geometry", 35);
+            student3.ExamsEntry[4] = new Exam("Programming", 47);
 
-            #region Task4
+            student3.ExamsOut = new Exam[5];
+            student3.ExamsOut[0] = new Exam("Math", 32);
+            student3.ExamsOut[1] = new Exam("English", 33);
+            student3.ExamsOut[2] = new Exam("History", 34);
+            student3.ExamsOut[3] = new Exam("Geometry", 35);
+            student3.ExamsOut[4] = new Exam("Programming", 36);
 
-            //User user=new User("Punhan","Aliyeva","puNhAn123",21);
-            //Console.WriteLine(user.IsPasswordValid());
+            Student[] students = { student1, student2, student3 };
 
+            foreach (var stu in students)
+            {
+                stu.CheckExam(stu);
+                Console.WriteLine();
+            }
+            
             #endregion
         }
     }
 }
+
+
+
+
+
